@@ -1,1 +1,1 @@
-web: set NODE_ENV=production&&node index.js
+web:node index.js
