@@ -10,7 +10,7 @@ mongoose.connection.on('connected', () => {
   console.log(`Connected to database: ${config.db}`);
 });
 
-app.listen(3000, () => {
+app.listen(config.port, () => {
   console.log(`API Server started and listening on port ${config.port} (${config.env})`);
 });
 
