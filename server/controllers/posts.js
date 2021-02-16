@@ -11,7 +11,9 @@ const user = require("../models/user");
             _id: userTotal.userCount,
             userId:req.body.userId,
             url:req.body.url,
-            description:req.body.description
+            description:req.body.description,
+            city:req.body.city,
+            state:req.body.state
         })
         return res.json(response)
     }
@@ -68,6 +70,8 @@ const getAllPosts = async(req, res, next)=> {
                         userId: 1,
                         url:1,
                         description : 1,
+                        city:1,
+                        state:1,
                         "userDoc" :
                         {
                             "username" : 1
