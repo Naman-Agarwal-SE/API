@@ -1,7 +1,7 @@
 const user = require("../models/user");
 const nodemailer = require("nodemailer");
 const { config } = require("dotenv/types");
-config=require('C:\Users\naman\Desktop\API\config\env');
+config=require('...\config\env');
 const link=config.link;
 
 async function create(req, res, next) {
