@@ -1,8 +1,6 @@
 const user = require("../models/user");
 const nodemailer = require("nodemailer");
-const { config } = require("dotenv/types");
-config=require('...\config\env');
-const link=config.link;
+const link='https://gossip-api.herokuapp.com/api/users/verified';
 
 async function create(req, res, next) {
     try{
