@@ -1,6 +1,6 @@
 const user = require("../models/user");
 const nodemailer = require("nodemailer");
-const link='http://localhost:3000/api/users/verified'
+const link='https://gossip-api.herokuapp.com/api/users/verified'
 
 async function create(req, res, next) {
     try{
