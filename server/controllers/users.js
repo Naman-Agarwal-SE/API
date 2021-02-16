@@ -4,8 +4,8 @@ const link='https://gossip-api.herokuapp.com/api/users/verified';
 
 async function create(req, res, next) {
     try{
-        let a=await user.findOne({email:req.body.email});
-    if(a==null){
+        let check=await user.findOne({email:req.body.email});
+    if(check==null){
         let response = await user.create({
             username: req.body.username,
             email:req.body.email,
