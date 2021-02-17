@@ -122,5 +122,16 @@ const likedBy=async(req, res, next)=> {
         err.status?res.status(err.status).json(err):res.status(400).json(err);
     }
 }; 
+const getNewPost=async(req,res,next)=>{
+    try{
+        let response = await post.find().sort({_id:-1}).limit(1); 
+        // console.log(response[0]['_id']);
+        return res.json(response[0]['_id']);
+    }
+    catch(err){
+        console.log(err);
+        err.status?res.status(err.status).json(err):res.status(400).json(err);
+    }
+};
 
-module.exports= {create,deletePost,updatePost,getAllPosts,likePost,likedBy};
+module.exports= {create,deletePost,updatePost,getAllPosts,likePost,likedBy,getNewPost};
